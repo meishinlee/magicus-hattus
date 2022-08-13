@@ -8,7 +8,7 @@ eng = matlab.engine.start_matlab()
 def uploadedImage(image):
     image_mat = matlab.uint8(list(image.transpose(PIL.Image.Transpose.TRANSPOSE).getdata()))
     image_mat.reshape((image.size[1], image.size[0], 3))
-    image_with_hat = eng.place_hat(image_mat)
+    image_with_hat = eng.place_hat(image_mat, 0)
     image_out = np.array(image_with_hat)
     return image_out
 
