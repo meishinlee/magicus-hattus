@@ -15,6 +15,9 @@ with gr.Blocks() as demo:
     ##### Intro #####
     gr.Markdown("<h1><center>Turn yourself into a magician using this tool!</center></h1>")
 
+    gr.Markdown("<br>")
+    gr.Image("HPGreatHall1.png")
+
     ##### Upload Image/Video #####
     with gr.Tabs():
         with gr.TabItem("Upload Image (Recommended)"):
