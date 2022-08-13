@@ -21,6 +21,7 @@ with gr.Blocks() as demo:
     gr.Markdown("<h1><center>Turn yourself into a magician using this tool!</center></h1>")
 
     ##### Upload Image/Video #####
+    webcam_input = gr.Image(source="webcam", type='pil')
     with gr.Tabs():
         with gr.TabItem("Upload Image (Recommended)"):
             image_input = gr.Image(type='pil')
@@ -35,7 +36,7 @@ with gr.Blocks() as demo:
             video_button.style(rounded=True, border=False, full_width=True)
 
         with gr.TabItem("Take a Picture"):
-            webcam_input = gr.Image(source="webcam", type='pil')
+            #webcam_input = gr.Image(source="webcam", type='pil') 
             webcam_output = gr.Image()
             webcam_button = gr.Button("Snap a photo!")
             webcam_button.style(rounded=True, border=False, full_width=True)
