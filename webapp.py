@@ -1,11 +1,16 @@
 import gradio as gr
 import matlab.engine
+import numpy as np
+import PIL
 
 eng = matlab.engine.start_matlab()
 
 def uploadedImage(image):
-    image_with_hat = eng.place_hat(image)
-    return image_with_hat
+    image_mat = matlab.uint8(list(image.transpose(PIL.Image.Transpose.TRANSPOSE).getdata()))
+    image_mat.reshape((image.size[1], image.size[0], 3))
+    image_with_hat = eng.place_hat(image_mat)
+    image_out = np.array(image_with_hat)
+    return image_out
 
 def uploadedVideo(video):
     return "video"
@@ -15,13 +20,10 @@ with gr.Blocks() as demo:
     ##### Intro #####
     gr.Markdown("<h1><center>Turn yourself into a magician using this tool!</center></h1>")
 
-    gr.Markdown("<br>")
-    gr.Image("HPGreatHall1.png")
-
     ##### Upload Image/Video #####
     with gr.Tabs():
         with gr.TabItem("Upload Image (Recommended)"):
-            image_input = gr.Image()
+            image_input = gr.Image(type='pil')
             image_output = gr.Image()
             image_button = gr.Button("Submit")
             image_button.style(rounded=True, border=False, full_width=True)
