@@ -1,4 +1,4 @@
-# magicfy-yourself
+# MagicusHattus
 
 Submission for Abracadabra Hacks 2
 

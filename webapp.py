@@ -19,15 +19,20 @@ def uploadedVideo(video):
 
 with gr.Blocks() as demo:
     ##### Intro #####
-    gr.Markdown("<h1><center>Turn yourself into a magician using this tool!</center></h1>")
+    gr.Markdown("<h1><center>MagicusHattus</center></h1>")
+    gr.Markdown("<h3><center>Turn yourself into a magician using this tool!</center></h3>")
 
     ##### Upload Image/Video #####
+    gr.Markdown("<h3>Take a picture with your webcam</h3>")
     webcam_input = gr.Image(source="webcam", type='pil')
     webcam_output = gr.Image()
     webcam_button = gr.Button("Snap a photo!")
     webcam_button.style(rounded=True, border=False, full_width=True)
     webcam_button.click(uploadedImage, inputs=webcam_input, outputs=webcam_output)
 
+    gr.Markdown("<br>")
+
+    gr.Markdown("<h3>Upload a picture or video</h3>")
     with gr.Tabs():
         with gr.TabItem("Upload Image"):
             image_input = gr.Image(type='pil')
