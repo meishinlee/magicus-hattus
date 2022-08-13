@@ -32,8 +32,16 @@ with gr.Blocks() as demo:
             video_input = gr.Video()
             video_output = gr.Video()
             video_button = gr.Button("Submit")
+            video_button.style(rounded=True, border=False, full_width=True)
+
+        with gr.TabItem("Take a Picture"):
+            webcam_input = gr.Image(source="webcam", type='pil')
+            webcam_output = gr.Image()
+            webcam_button = gr.Button("Snap a photo!")
+            webcam_button.style(rounded=True, border=False, full_width=True)
 
     image_button.click(uploadedImage, inputs=image_input, outputs=image_output)
     video_button.click(uploadedVideo, inputs=video_input, outputs=video_output)
+    webcam_button.click(uploadedImage, inputs=webcam_input, outputs=webcam_output)
 
 demo.launch(share=True)
