@@ -13,7 +13,8 @@ def uploadedImage(image):
     return image_out
 
 def uploadedVideo(video):
-    return "video"
+    hat_video = eng.place_hat_video(video)
+    return hat_video + ".mp4"
 
 
 with gr.Blocks() as demo:
@@ -26,9 +27,9 @@ with gr.Blocks() as demo:
     webcam_button = gr.Button("Snap a photo!")
     webcam_button.style(rounded=True, border=False, full_width=True)
     webcam_button.click(uploadedImage, inputs=webcam_input, outputs=webcam_output)
-    
+
     with gr.Tabs():
-        with gr.TabItem("Upload Image (Recommended)"):
+        with gr.TabItem("Upload Image"):
             image_input = gr.Image(type='pil')
             image_output = gr.Image()
             image_button = gr.Button("Submit")
@@ -39,12 +40,6 @@ with gr.Blocks() as demo:
             video_output = gr.Video()
             video_button = gr.Button("Submit")
             video_button.style(rounded=True, border=False, full_width=True)
-
-        # with gr.TabItem("Take a Picture"):
-        #     #webcam_input = gr.Image(source="webcam", type='pil') 
-        #     webcam_output = gr.Image()
-        #     webcam_button = gr.Button("Snap a photo!")
-        #     webcam_button.style(rounded=True, border=False, full_width=True)
 
     image_button.click(uploadedImage, inputs=image_input, outputs=image_output)
     video_button.click(uploadedVideo, inputs=video_input, outputs=video_output)
