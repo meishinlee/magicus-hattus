@@ -11,7 +11,7 @@ Devpost submission page: [https://devpost.com/software/magic-ify](https://devpos
 1. Clone this repo
 2. Install [Gradio](gradio.app)
 3. Install [MATLAB Engine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
-4. Run webapp.py
+4. Run webapp.py using Python
 5. Visit [http://127.0.0.1:7860/](http://127.0.0.1:7860/) in your web browser
 
 ### Resources Used
