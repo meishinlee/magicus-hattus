@@ -1,6 +1,8 @@
 # Magicus Hattus
 #### With a sparkle of tech and computer vision tricks at hand, become the master magician you've always wanted to be!
 
+![Magicus Hattus logo](NewLogo.gif)
+
 🏆 **First Overall** and **Best Use of MATLAB** at Abracadabra Hacks 2
 
 Devpost submission page: [https://devpost.com/software/magic-ify](https://devpost.com/software/magic-ify)
