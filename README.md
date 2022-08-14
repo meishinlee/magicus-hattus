@@ -1,5 +1,5 @@
 # Magicus Hattus
-With a sparkle of tech and computer vision tricks at hand, become the master magician you've always wanted to be!
+### With a sparkle of tech and computer vision tricks at hand, become the master magician you've always wanted to be!
 
 🏆 **First Overall** and **Best Use of MATLAB** at Abracadabra Hacks 2
 
