@@ -17,7 +17,7 @@ An application that places a magic hat on a person's head. Reads the user's emot
 5. Visit [http://127.0.0.1:7860/](http://127.0.0.1:7860/) in your web browser
 
 ### Resources Used
-- MatLab
+- MATLAB
 - Python
 - Computer Vision 
 - Gradio (for deployment)
